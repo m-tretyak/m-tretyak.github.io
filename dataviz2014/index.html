@@ -31,12 +31,6 @@
 		var derivers = $.pivotUtilities.derivers;
 		$.get("data/data.csv", function(mps) {
 			$("#output").pivotUI($.csv.toArrays(mps), {
-				derivedAttributes: {
-				"Age Bin": derivers.bin("Age", 10),
-				"Gender Imbalance": function(mp) {
-						return mp["Gender"] == "Male" ? 1 : -1;
-					}
-				}
 			});
 		});
              });
