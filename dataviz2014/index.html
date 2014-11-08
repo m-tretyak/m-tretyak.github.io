@@ -29,7 +29,7 @@
             google.load("visualization", "1", {packages:["corechart", "charteditor"]});
             $(function(){
 		var derivers = $.pivotUtilities.derivers;
-		$.get("data/datat.csv", function(mps) {
+		$.get("data/data.csv", function(mps) {
 		$("#output").pivotUI($.csv.toArrays(mps), {
 			derivedAttributes: {
 			"Age Bin": derivers.bin("Age", 10),
