@@ -31,6 +31,9 @@
 		var derivers = $.pivotUtilities.derivers;
 		$.get("data/data.csv", function(mps) {
 			$("#output").pivotUI($.csv.toArrays(mps), {
+				cols: [""], 
+				rows: ["секция","Комнат"],
+				rendererName: "Table"
 			});
 		});
              });
