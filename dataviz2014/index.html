@@ -31,7 +31,7 @@
 		var derivers = $.pivotUtilities.derivers;
 		$.get("data/data.csv", function(mps) {
 			$("#output").pivotUI($.csv.toArrays(mps), {
-				cols: [""], 
+				cols: ["Статус"], 
 				rows: ["секция","Комнат"],
 				rendererName: "Table"
 			});
